@@ -3,7 +3,7 @@ import ImagesUploader from 'react-images-uploader';
 import 'react-images-uploader/styles.css';
 import 'react-images-uploader/font.css';
 
-export default class MyUploader extends Component {
+export default class Uploader extends Component {
     render() {
         return (
             <ImagesUploader
@@ -11,11 +11,12 @@ export default class MyUploader extends Component {
                 optimisticPreviews
                 onLoadEnd={(err) => {
                     if (err) {
-                        console.error(err,"No server find, please check server connection");
+                        console.error(err);
                     }
                 }}
                 label="Hi Ori, to upload select multiple pictures from your computer"
             />
+
         );
     }
 }
